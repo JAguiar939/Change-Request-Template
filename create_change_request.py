@@ -3,7 +3,7 @@ from openpyxl import load_workbook
 import ttkbootstrap as ttk
 from ttkbootstrap.constants import *
 
-DEFAULT_THEME_NAME = 'dracula'
+DEFAULT_THEME_NAME = 'catppuccin'
 DEFAULT_THEME_TONE = 'dark'
 
 def focus_next_widget(event):
@@ -25,8 +25,8 @@ while ws[f'A{row}'].value:
 
 window = ttk.App(theme=f'{DEFAULT_THEME_NAME}-{DEFAULT_THEME_TONE}')
 window.title('Create Change Request')
-window.columnconfigure(1, weight=1)
-window.minsize(900, 600)
+#window.columnconfigure(1, weight=1)
+#window.minsize(900, 600)
 
 themes = ['bootstrap','pydata','nord','solarized','catppuccin','gruvbox','dracula','tokyo-night','one','everforest','vapor','minty','pulse','united','sandstone']
 
