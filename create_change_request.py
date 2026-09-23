@@ -24,7 +24,7 @@ while ws[f'A{row}'].value:
 
 
 window = ttk.App(theme=f'{DEFAULT_THEME_NAME}-{DEFAULT_THEME_TONE}')
-window.title('Change Request Template')
+window.title('Create Change Request')
 window.columnconfigure(1, weight=1)
 window.minsize(900, 600)
 
@@ -70,14 +70,14 @@ for heading in headings:
     if heading == 'Request for Change Details(Change Order, Request, or Incident Number)':
         combos[heading]['textentry'] = None
         continue
-    combos[heading]['textentry'] = ttk.Text(master=window, height=2)
+    combos[heading]['textentry'] = ttk.Text(master=window, height=1)
     combos[heading]['textentry'].bind("<Tab>", focus_next_widget)
     combos[heading]['textentry'].grid(row=combos[heading]['row'], column=1, sticky='nesw')
 
 output_combo = {}
 output_combo['heading'] = ttk.Label(master=window, text='Output File Name', anchor='e')
 output_combo['heading'].grid(row=len(headings)+1, column=0, sticky='nesw')
-output_combo['textentry'] = ttk.Text(master=window, height=2)
+output_combo['textentry'] = ttk.Text(master=window, height=1)
 output_combo['textentry'].bind("<Tab>", focus_next_widget)
 output_combo['textentry'].grid(row=len(headings)+1, column=1, sticky='nesw')
 
