@@ -26,7 +26,7 @@ while ws[f'A{row}'].value:
 window = ttk.App(theme=f'{DEFAULT_THEME_NAME}-{DEFAULT_THEME_TONE}')
 window.title('Change Request Template')
 window.columnconfigure(1, weight=1)
-window.minsize(900, 600)
+window.minsize(1920, 600)
 
 themes = ['bootstrap','pydata','nord','solarized','catppuccin','gruvbox','dracula','tokyo-night','one','everforest','vapor','minty','pulse','united','sandstone']
 
