@@ -75,7 +75,7 @@ for heading in headings:
     if heading == 'Request for Change Details(Change Order, Request, or Incident Number)':
         combos[heading]['textentry'] = None
         continue
-    combos[heading]['textentry'] = ttk.Text(master=window, height=1)
+    combos[heading]['textentry'] = ttk.Text(master=window, height=1 if heading.strip() not in ['Implementation Plan', 'Detailed Backout Plan'] else 3)
     combos[heading]['textentry'].bind("<Tab>", focus_next_widget)
     combos[heading]['textentry'].grid(row=combos[heading]['row'], column=1, sticky='nesw')
 
