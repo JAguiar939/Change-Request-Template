@@ -3,16 +3,16 @@ from openpyxl import load_workbook
 import ttkbootstrap as ttk
 from ttkbootstrap.constants import *
 
-DEFAULT_THEME_NAME = 'vapor'
-DEFAULT_THEME_TONE = 'dark'
 
 def focus_next_widget(event):
     event.widget.tk_focusNext().focus()
     return("break")
 
 root = path.dirname(__file__)
+
 wb = load_workbook(f'{root}/lib/Template.xlsx')
 ws = wb.active
+
 
 row = 1
 
@@ -22,7 +22,14 @@ while ws[f'A{row}'].value:
     headings.append(ws[f'A{row}'].value)
     row += 1
 
+def get_default_theme(theme_file_path):
+    with open(theme_file_path, 'r') as theme_file:
+        content = theme_file.read().strip().split('-')
+    name = content[0]
+    tone = content[1]
+    return name, tone
 
+DEFAULT_THEME_NAME, DEFAULT_THEME_TONE = get_default_theme(f'{root}/DEFAULT_THEME')
 window = ttk.App(theme=f'{DEFAULT_THEME_NAME}-{DEFAULT_THEME_TONE}')
 window.title('Create Change Request')
 #window.columnconfigure(1, weight=1)
