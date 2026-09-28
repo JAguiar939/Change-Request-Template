@@ -10,6 +10,6 @@ uv sync
 uv run create_change_request.py
 " | tee ccr.sh
 chmod +x ccr.sh
-
+echo "vapor-dark" | tee DEFAULT_THEME
 sudo ln -sf "$SCRIPT_DIR/ccr.sh" /usr/local/bin/ccr
 

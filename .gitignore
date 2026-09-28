@@ -10,3 +10,4 @@ wheels/
 .venv
 output/*
 ccr.sh
+DEFAULT_THEME
