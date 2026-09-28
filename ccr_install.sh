@@ -8,7 +8,7 @@ cd \"$SCRIPT_DIR\"
 git pull
 uv sync
 uv run create_change_request.py
-" | sudo tee ccr.sh
+" | tee ccr.sh
 chmod +x ccr.sh
 
 sudo ln -sf "$SCRIPT_DIR/ccr.sh" /usr/local/bin/ccr

@@ -28,6 +28,11 @@ window.title('Create Change Request')
 #window.columnconfigure(1, weight=1)
 #window.minsize(900, 600)
 
+window.lift()
+window.attributes('-topmost',True)
+window.after_idle(window.attributes,'-topmost',False)
+
+
 themes = ['bootstrap','pydata','nord','solarized','catppuccin','gruvbox','dracula','tokyo-night','one','everforest','vapor','minty','pulse','united','sandstone']
 
 
