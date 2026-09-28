@@ -3,7 +3,7 @@ from openpyxl import load_workbook
 import ttkbootstrap as ttk
 from ttkbootstrap.constants import *
 
-DEFAULT_THEME_NAME = 'solarized'
+DEFAULT_THEME_NAME = 'vapor'
 DEFAULT_THEME_TONE = 'dark'
 
 def focus_next_widget(event):
